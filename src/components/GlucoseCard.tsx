@@ -89,7 +89,9 @@ const GlucoseCard: React.FC<GlucoseCardProps> = ({ glucoseData, insight }) => {
         },
         grid: {
           display: false,
-          // Remove the invalid drawBorder property
+        },
+        border: {
+          display: false
         }
       },
       y: {
@@ -103,9 +105,21 @@ const GlucoseCard: React.FC<GlucoseCardProps> = ({ glucoseData, insight }) => {
           }
         },
         grid: {
-          color: '#333',
-          // Remove the invalid drawBorder property
+          color: 'rgba(51, 51, 51, 0.5)',
+          lineWidth: 0.5
+        },
+        border: {
+          display: false
         }
+      }
+    },
+    elements: {
+      line: {
+        borderWidth: 2
+      },
+      point: {
+        borderWidth: 0,
+        radius: 3
       }
     }
   };
