@@ -1,9 +1,10 @@
+
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Linkedin, Mail, MapPin, BookOpen, Code, Star, Dumbbell, Music, Headphones, Shirt, Watch, Smartphone } from "lucide-react";
+import { Linkedin, Mail, MapPin, BookOpen, Code, Star, Dumbbell, Music, Headphones, Shirt, Watch, Smartphone, Activity, BarChart } from "lucide-react";
 
 const Index = () => {
   return (
@@ -67,7 +68,7 @@ const Index = () => {
           <Tabs defaultValue="bloodSugarSync" className="w-full">
             <TabsList className="w-full mb-6 bg-gray-700 p-1 rounded-lg">
               <TabsTrigger value="bloodSugarSync" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Blood Sugar Sync</TabsTrigger>
-              <TabsTrigger value="project2" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Project 2</TabsTrigger>
+              <TabsTrigger value="stravaPulse" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Strava Pulse</TabsTrigger>
               <TabsTrigger value="project3" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Project 3</TabsTrigger>
             </TabsList>
 
@@ -136,20 +137,65 @@ const Index = () => {
               </Card>
             </TabsContent>
 
-            {/* Placeholder for Project 2 */}
-            <TabsContent value="project2">
+            {/* Strava Pulse Tab */}
+            <TabsContent value="stravaPulse" className="space-y-6">
               <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
-                    <span>🚧</span> Project 2
+                    <span>🏃‍♂️</span> Strava Pulse
                   </CardTitle>
-                  <CardDescription className="text-gray-400">Coming soon</CardDescription>
+                  <CardDescription className="text-gray-400">Recovery & Readiness Layer for Strava</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">This project is currently under development.</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
+                      <div className="bg-gray-700 rounded-md p-4 border border-gray-600">
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🔍</span> Problem Statement
+                        </h4>
+                        <p className="text-sm mb-4 text-gray-300">
+                          Users are tracking their performance in Strava but lack insight into how their body is 
+                          recovering, adapting, and preparing for future effort. There's no recovery-first guidance to 
+                          prevent overtraining or promote smarter scheduling.
+                        </p>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>💡</span> Solution
+                        </h4>
+                        <p className="text-sm mb-4 text-gray-300">
+                          Strava Pulse introduces a recovery and readiness system into the app that informs users 
+                          when to push, when to rest, and how their wellness habits (like sleep and glucose levels) 
+                          impact performance. This feature strengthens Strava's position at the intersection of fitness, 
+                          community, and personal health optimization.
+                        </p>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>✨</span> Key Features
+                        </h4>
+                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
+                          <li>Recovery Score combining HRV, sleep, and resting heart rate</li>
+                          <li>Activity recommendations based on recovery state</li>
+                          <li>Training Load + Recovery Graph visualization</li>
+                          <li>Fueling & Glucose Insights (via integrations)</li>
+                          <li>Shareable Recovery Snapshots</li>
+                        </ul>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🎯</span> Success Metrics
+                        </h4>
+                        <p className="text-sm text-gray-300">
+                          Feature adoption rate among active users, increase in daily app open rate (especially on 
+                          non-activity days), engagement with recovery insights, and upgrade conversion to premium if behind paywall.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
-                <CardFooter>
-                  <Button variant="outline" disabled className="border-gray-600 text-gray-400">View Project</Button>
+                <CardFooter className="flex justify-center">
+                  <Link to="/strava-pulse">
+                    <Button className="bg-[#fc4c02] hover:bg-[#e44400] text-white">View Product Concept</Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </TabsContent>
