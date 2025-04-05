@@ -5,9 +5,12 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ArrowLeft, User, Home, Users, Activity, Map, Clock, BarChart2, Share2, Info } from 'lucide-react';
 import StravaPulseFlowchart from '@/components/StravaPulseFlowchart';
+import StravaTrendsView from '@/components/StravaTrendsView';
+import StravaInsightsView from '@/components/StravaInsightsView';
 
 const StravaPulse = () => {
   const [activeTab, setActiveTab] = useState("product");
+  const [activeProductTab, setActiveProductTab] = useState("today");
 
   return (
     <div className="bg-gray-50 min-h-screen pb-20">
@@ -73,95 +76,117 @@ const StravaPulse = () => {
 
                 {/* Tabs */}
                 <div className="flex border-b border-gray-200">
-                  <div className="flex-1 text-center py-3 text-[#fc4c02] border-b-2 border-[#fc4c02] text-sm font-medium">Today</div>
-                  <div className="flex-1 text-center py-3 text-gray-500 text-sm">Trends</div>
-                  <div className="flex-1 text-center py-3 text-gray-500 text-sm">Insights</div>
-                </div>
-
-                {/* Recovery Metrics */}
-                <div className="px-4 py-5 border-b border-gray-200">
-                  <h3 className="font-medium mb-4 text-gray-700">Recovery Metrics</h3>
-                  <div className="flex justify-between">
-                    <div className="text-center">
-                      <div className="text-xl font-semibold text-gray-900 mb-1">68</div>
-                      <div className="text-xs text-gray-500">HRV</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-xl font-semibold text-gray-900 mb-1">58</div>
-                      <div className="text-xs text-gray-500">RHR</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-xl font-semibold text-gray-900 mb-1">7h 20m</div>
-                      <div className="text-xs text-gray-500">Sleep</div>
-                    </div>
+                  <div 
+                    className={`flex-1 text-center py-3 text-sm font-medium cursor-pointer ${activeProductTab === 'today' ? 'text-[#fc4c02] border-b-2 border-[#fc4c02]' : 'text-gray-500'}`}
+                    onClick={() => setActiveProductTab('today')}
+                  >
+                    Today
+                  </div>
+                  <div 
+                    className={`flex-1 text-center py-3 text-sm font-medium cursor-pointer ${activeProductTab === 'trends' ? 'text-[#fc4c02] border-b-2 border-[#fc4c02]' : 'text-gray-500'}`}
+                    onClick={() => setActiveProductTab('trends')}
+                  >
+                    Trends
+                  </div>
+                  <div 
+                    className={`flex-1 text-center py-3 text-sm font-medium cursor-pointer ${activeProductTab === 'insights' ? 'text-[#fc4c02] border-b-2 border-[#fc4c02]' : 'text-gray-500'}`}
+                    onClick={() => setActiveProductTab('insights')}
+                  >
+                    Insights
                   </div>
                 </div>
 
-                {/* Training Load Graph */}
-                <div className="px-4 py-5 border-b border-gray-200">
-                  <div className="flex justify-between items-center mb-4">
-                    <h3 className="font-medium text-gray-700">Training Load vs Recovery</h3>
-                    <span className="text-xs text-gray-500">Last 7 days</span>
-                  </div>
-                  <div className="h-44 bg-gray-100 rounded-lg overflow-hidden relative flex items-center justify-center">
-                    <div className="absolute inset-0 px-4 py-3">
-                      {/* Mock Graph with SVG */}
-                      <svg width="100%" height="100%" viewBox="0 0 300 120" preserveAspectRatio="none">
-                        {/* Recovery Line */}
-                        <path
-                          d="M0,50 C20,40 40,70 60,65 C80,60 100,30 120,35 C140,40 160,55 180,50 C200,45 220,25 240,30 C260,35 280,45 300,40"
-                          fill="none"
-                          stroke="#fc4c02"
-                          strokeWidth="2"
-                        />
+                {activeProductTab === 'today' && (
+                  <>
+                    {/* Recovery Metrics */}
+                    <div className="px-4 py-5 border-b border-gray-200">
+                      <h3 className="font-medium mb-4 text-gray-700">Recovery Metrics</h3>
+                      <div className="flex justify-between">
+                        <div className="text-center">
+                          <div className="text-xl font-semibold text-gray-900 mb-1">68</div>
+                          <div className="text-xs text-gray-500">HRV</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-xl font-semibold text-gray-900 mb-1">58</div>
+                          <div className="text-xs text-gray-500">RHR</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-xl font-semibold text-gray-900 mb-1">7h 20m</div>
+                          <div className="text-xs text-gray-500">Sleep</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Training Load Graph */}
+                    <div className="px-4 py-5 border-b border-gray-200">
+                      <div className="flex justify-between items-center mb-4">
+                        <h3 className="font-medium text-gray-700">Training Load vs Recovery</h3>
+                        <span className="text-xs text-gray-500">Last 7 days</span>
+                      </div>
+                      <div className="h-44 bg-gray-100 rounded-lg overflow-hidden relative flex items-center justify-center">
+                        <div className="absolute inset-0 px-4 py-3">
+                          {/* Mock Graph with SVG */}
+                          <svg width="100%" height="100%" viewBox="0 0 300 120" preserveAspectRatio="none">
+                            {/* Recovery Line */}
+                            <path
+                              d="M0,50 C20,40 40,70 60,65 C80,60 100,30 120,35 C140,40 160,55 180,50 C200,45 220,25 240,30 C260,35 280,45 300,40"
+                              fill="none"
+                              stroke="#fc4c02"
+                              strokeWidth="2"
+                            />
+                            
+                            {/* Training Load Bars */}
+                            <rect x="10" y="90" width="20" height="30" fill="#3498db" opacity="0.7" />
+                            <rect x="50" y="70" width="20" height="50" fill="#3498db" opacity="0.7" />
+                            <rect x="90" y="85" width="20" height="35" fill="#3498db" opacity="0.7" />
+                            <rect x="130" y="100" width="20" height="20" fill="#3498db" opacity="0.7" />
+                            <rect x="170" y="80" width="20" height="40" fill="#3498db" opacity="0.7" />
+                            <rect x="210" y="60" width="20" height="60" fill="#3498db" opacity="0.7" />
+                            <rect x="250" y="90" width="20" height="30" fill="#3498db" opacity="0.7" />
+                          </svg>
+                        </div>
                         
-                        {/* Training Load Bars */}
-                        <rect x="10" y="90" width="20" height="30" fill="#3498db" opacity="0.7" />
-                        <rect x="50" y="70" width="20" height="50" fill="#3498db" opacity="0.7" />
-                        <rect x="90" y="85" width="20" height="35" fill="#3498db" opacity="0.7" />
-                        <rect x="130" y="100" width="20" height="20" fill="#3498db" opacity="0.7" />
-                        <rect x="170" y="80" width="20" height="40" fill="#3498db" opacity="0.7" />
-                        <rect x="210" y="60" width="20" height="60" fill="#3498db" opacity="0.7" />
-                        <rect x="250" y="90" width="20" height="30" fill="#3498db" opacity="0.7" />
-                      </svg>
+                        <div className="text-gray-400 flex flex-col items-center justify-center z-10">
+                          <BarChart2 className="w-6 h-6 mb-1" />
+                          <span className="text-xs">Training Load vs Recovery Chart</span>
+                        </div>
+                      </div>
                     </div>
-                    
-                    <div className="text-gray-400 flex flex-col items-center justify-center z-10">
-                      <BarChart2 className="w-6 h-6 mb-1" />
-                      <span className="text-xs">Training Load vs Recovery Chart</span>
-                    </div>
-                  </div>
-                </div>
 
-                {/* Today's Recommendation */}
-                <div className="px-4 py-5 border-b border-gray-200">
-                  <h3 className="font-medium mb-4 text-gray-700">Today's Recommendation</h3>
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
-                    <h4 className="text-blue-600 font-medium mb-1 text-sm">Light to Moderate Training</h4>
-                    <p className="text-sm text-gray-700 mb-3">
-                      Your HRV is slightly below your baseline, but sleep quality was good. 
-                      A zone 2 run or moderate strength session would be ideal today.
-                    </p>
-                    <div className="flex gap-2">
-                      <button className="px-3 py-2 bg-blue-500 text-white rounded text-xs font-medium">Find a Workout</button>
-                      <button className="px-3 py-2 bg-white border border-blue-500 text-blue-500 rounded text-xs font-medium">Schedule Rest</button>
+                    {/* Today's Recommendation */}
+                    <div className="px-4 py-5 border-b border-gray-200">
+                      <h3 className="font-medium mb-4 text-gray-700">Today's Recommendation</h3>
+                      <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded">
+                        <h4 className="text-blue-600 font-medium mb-1 text-sm">Light to Moderate Training</h4>
+                        <p className="text-sm text-gray-700 mb-3">
+                          Your HRV is slightly below your baseline, but sleep quality was good. 
+                          A zone 2 run or moderate strength session would be ideal today.
+                        </p>
+                        <div className="flex gap-2">
+                          <button className="px-3 py-2 bg-blue-500 text-white rounded text-xs font-medium">Find a Workout</button>
+                          <button className="px-3 py-2 bg-white border border-blue-500 text-blue-500 rounded text-xs font-medium">Schedule Rest</button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                </div>
 
-                {/* Share Card */}
-                <div className="px-4 py-5">
-                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 flex items-center justify-between">
-                    <div>
-                      <h4 className="font-medium text-sm mb-1">Share Your Recovery</h4>
-                      <p className="text-xs text-gray-500">Let your friends know you're training smart</p>
+                    {/* Share Card */}
+                    <div className="px-4 py-5">
+                      <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 flex items-center justify-between">
+                        <div>
+                          <h4 className="font-medium text-sm mb-1">Share Your Recovery</h4>
+                          <p className="text-xs text-gray-500">Let your friends know you're training smart</p>
+                        </div>
+                        <button className="px-3 py-2 bg-[#fc4c02] text-white rounded text-xs font-medium flex items-center">
+                          <Share2 className="w-3.5 h-3.5 mr-1.5" />
+                          Share
+                        </button>
+                      </div>
                     </div>
-                    <button className="px-3 py-2 bg-[#fc4c02] text-white rounded text-xs font-medium flex items-center">
-                      <Share2 className="w-3.5 h-3.5 mr-1.5" />
-                      Share
-                    </button>
-                  </div>
-                </div>
+                  </>
+                )}
+
+                {activeProductTab === 'trends' && <StravaTrendsView />}
+                {activeProductTab === 'insights' && <StravaInsightsView />}
 
                 {/* Bottom Space for Footer Nav */}
                 <div className="h-16"></div>
