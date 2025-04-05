@@ -89,7 +89,6 @@ const GlucoseCard: React.FC<GlucoseCardProps> = ({ glucoseData, insight }) => {
         },
         grid: {
           display: false,
-          drawBorder: false,
         },
         border: {
           display: false,
@@ -108,7 +107,6 @@ const GlucoseCard: React.FC<GlucoseCardProps> = ({ glucoseData, insight }) => {
         grid: {
           color: 'rgba(51, 51, 51, 0.2)',
           lineWidth: 0.5,
-          drawBorder: false,
         },
         border: {
           display: false,
