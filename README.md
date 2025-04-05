@@ -1,7 +1,7 @@
 
 # Omer Malik - Portfolio & Projects
 
-This is my personal portfolio website showcasing my background, skills, and projects, with a special focus on my Blood Sugar Sync application.
+This is my personal portfolio website showcasing my background, skills, and projects, with a focus on product concepts in the fitness and wellness tech space.
 
 ## Portfolio
 
@@ -23,6 +23,18 @@ This application monitors and analyzes how blood glucose levels impact sleep qua
 - Notification system for glucose anomalies during sleep
 - Dashboard with comprehensive health metrics
 
+## Strava Pulse - Recovery & Readiness Layer
+
+A product concept that introduces a recovery and readiness system into the Strava app that informs users when to push, when to rest, and how their wellness habits impact performance.
+
+### Features
+
+- Recovery Score combining HRV, sleep, and resting heart rate
+- Activity recommendations based on recovery state
+- Training Load + Recovery Graph visualization
+- Fueling & Glucose Insights (via integrations)
+- Shareable Recovery Snapshots
+
 ## Technology
 
-Built with React, TypeScript, and Tailwind CSS using modern web standards and the latest Lovable features.
+Built with React, TypeScript, and Tailwind CSS using modern web standards.
