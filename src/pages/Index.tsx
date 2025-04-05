@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Linkedin, Mail, MapPin, BookOpen, Code, Star, Dumbbell, Music, Headphones, Shirt } from "lucide-react";
+import { Linkedin, Mail, MapPin, BookOpen, Code, Star, Dumbbell, Music, Headphones, Shirt, Watch, Smartphone } from "lucide-react";
 
 const Index = () => {
   return (
@@ -102,6 +102,12 @@ const Index = () => {
                           Blood Sugar Sync is an application that monitors and analyzes how blood glucose levels impact sleep quality 
                           and recovery. By visualizing the relationship between glucose trends and sleep metrics, users can make 
                           informed decisions to improve their sleep and overall health.
+                        </p>
+                        <p className="text-sm mb-4 text-gray-300">
+                          This concept could be integrated into wearable devices like <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> Oura</span>, 
+                          <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> Garmin</span>, 
+                          <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> Apple Watch</span> and 
+                          <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> WHOOP</span>!
                         </p>
                         
                         <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
