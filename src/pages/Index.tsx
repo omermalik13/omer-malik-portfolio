@@ -98,8 +98,8 @@ const Index = () => {
                 </CardContent>
                 <CardFooter className="flex justify-between">
                   <Button variant="outline">View Code</Button>
-                  <Link to="/">
-                    <Button>View Live Demo</Button>
+                  <Link to="/app">
+                    <Button>View Product Concept</Button>
                   </Link>
                 </CardFooter>
               </Card>
