@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -104,10 +103,7 @@ const Index = () => {
                           informed decisions to improve their sleep and overall health.
                         </p>
                         <p className="text-sm mb-4 text-gray-300">
-                          This concept could be integrated into wearable devices like <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> Oura</span>, 
-                          <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> Garmin</span>, 
-                          <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> Apple Watch</span> and 
-                          <span className="inline-flex items-center gap-1"><Watch className="w-3.5 h-3.5" /> WHOOP</span>!
+                          This concept could be integrated into wearable devices like Oura, Garmin, Apple Watch and WHOOP!
                         </p>
                         
                         <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
