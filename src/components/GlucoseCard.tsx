@@ -50,8 +50,8 @@ const GlucoseCard: React.FC<GlucoseCardProps> = ({ glucoseData, insight }) => {
         backgroundColor: '#F97316',
         borderColor: '#F97316',
         tension: 0.4,
-        pointRadius: 2,
-        pointHoverRadius: 4
+        pointRadius: 0,
+        pointHoverRadius: 0
       }
     ]
   };
@@ -118,9 +118,8 @@ const GlucoseCard: React.FC<GlucoseCardProps> = ({ glucoseData, insight }) => {
         borderWidth: 1.5
       },
       point: {
-        borderWidth: 0,
-        radius: 2,
-        hoverRadius: 4
+        radius: 0,
+        hoverRadius: 0
       }
     }
   };
