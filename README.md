@@ -13,5 +13,5 @@ This application monitors and analyzes how blood glucose levels impact sleep qua
 
 ## Technology
 
-Built with React, TypeScript, and Tailwind CSS using modern web standards.
+Built with React, TypeScript, and Tailwind CSS using modern web standards and the latest Lovable features.
 
