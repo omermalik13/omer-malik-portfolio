@@ -4,7 +4,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Mail, MapPin, BookOpen, Code, Star, Dumbbell, Music, Headphones, Shirt } from "lucide-react";
 
 const Index = () => {
   return (
@@ -12,8 +12,10 @@ const Index = () => {
       {/* Header */}
       <header className="bg-gray-800 shadow-md border-b border-gray-700">
         <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-white">Omer Malik</h1>
-          <p className="text-gray-300">Product Manager | Software Engineer</p>
+          <h1 className="text-3xl font-bold text-white flex items-center gap-2">
+            <span>✨</span> Omer Malik
+          </h1>
+          <p className="text-gray-300 ml-6 mt-1">Product Manager | Software Engineer</p>
         </div>
       </header>
 
@@ -21,7 +23,9 @@ const Index = () => {
       <main className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         {/* About Me Section */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-100">About Me</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-100 flex items-center gap-2">
+            <span>👋</span> About Me
+          </h2>
           <div className="bg-gray-800 shadow-lg rounded-lg p-6 border border-gray-700">
             <p className="text-gray-300 leading-relaxed mb-4">
               Hi, I'm Omer — a former Software Engineer turned Product Manager with 8+ years of experience in fast-paced 
@@ -35,12 +39,32 @@ const Index = () => {
             <p className="text-gray-300 leading-relaxed">
               My other interests include AI/ML technology, sports, music and fashion.
             </p>
+            
+            <div className="mt-6 pt-4 border-t border-gray-700">
+              <h3 className="text-md font-medium text-gray-200 mb-2">Interests</h3>
+              <div className="flex flex-wrap gap-2">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
+                  <Code className="w-3.5 h-3.5 mr-1" /> Tech
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
+                  <Dumbbell className="w-3.5 h-3.5 mr-1" /> Fitness
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
+                  <Music className="w-3.5 h-3.5 mr-1" /> Music
+                </span>
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
+                  <Shirt className="w-3.5 h-3.5 mr-1" /> Fashion
+                </span>
+              </div>
+            </div>
           </div>
         </section>
 
         {/* Projects Section */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-100">My Projects</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-100 flex items-center gap-2">
+            <span>💼</span> My Projects
+          </h2>
           <Tabs defaultValue="bloodSugarSync" className="w-full">
             <TabsList className="w-full mb-6 bg-gray-700 p-1 rounded-lg">
               <TabsTrigger value="bloodSugarSync" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Blood Sugar Sync</TabsTrigger>
@@ -52,40 +76,38 @@ const Index = () => {
             <TabsContent value="bloodSugarSync" className="space-y-6">
               <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-white">Blood Sugar Sync</CardTitle>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <span>📊</span> Blood Sugar Sync
+                  </CardTitle>
                   <CardDescription className="text-gray-400">Glucose and Sleep Monitoring Application</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    <div className="aspect-video rounded-md overflow-hidden flex justify-center items-center bg-gray-700">
-                      <div className="max-w-sm">
-                        <img 
-                          src="/placeholder.svg" 
-                          alt="Blood Sugar Sync App" 
-                          className="h-auto w-full rounded-md"
-                        />
-                      </div>
-                    </div>
-                    
                     <div>
                       <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
                       <div className="bg-gray-700 rounded-md p-4 border border-gray-600">
-                        <h4 className="font-semibold mb-2 text-gray-200">Problem Statement</h4>
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🔍</span> Problem Statement
+                        </h4>
                         <p className="text-sm mb-4 text-gray-300">
                           Many people with diabetes or those monitoring their glucose levels struggle to understand how their blood 
                           sugar impacts their sleep quality and overall recovery. Existing solutions track either glucose or sleep, 
                           but rarely provide meaningful correlations between both.
                         </p>
                         
-                        <h4 className="font-semibold mb-2 text-gray-200">Solution</h4>
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>💡</span> Solution
+                        </h4>
                         <p className="text-sm mb-4 text-gray-300">
                           Blood Sugar Sync is an application that monitors and analyzes how blood glucose levels impact sleep quality 
                           and recovery. By visualizing the relationship between glucose trends and sleep metrics, users can make 
                           informed decisions to improve their sleep and overall health.
                         </p>
                         
-                        <h4 className="font-semibold mb-2 text-gray-200">Key Features</h4>
-                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300">
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>✨</span> Key Features
+                        </h4>
+                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
                           <li>Real-time glucose monitoring with visualization</li>
                           <li>Sleep quality analysis correlated with glucose levels</li>
                           <li>Personalized insights and recommendations</li>
@@ -93,7 +115,9 @@ const Index = () => {
                           <li>Comprehensive health metrics dashboard</li>
                         </ul>
                         
-                        <h4 className="font-semibold mb-2 text-gray-200">Success Metrics</h4>
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🎯</span> Success Metrics
+                        </h4>
                         <p className="text-sm text-gray-300">
                           Improved sleep quality scores, reduced glucose variability during night, and increased user engagement 
                           with health recommendations.
@@ -114,7 +138,9 @@ const Index = () => {
             <TabsContent value="project2">
               <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-white">Project 2</CardTitle>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <span>🚧</span> Project 2
+                  </CardTitle>
                   <CardDescription className="text-gray-400">Coming soon</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -130,7 +156,9 @@ const Index = () => {
             <TabsContent value="project3">
               <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-white">Project 3</CardTitle>
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <span>🚧</span> Project 3
+                  </CardTitle>
                   <CardDescription className="text-gray-400">Coming soon</CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -146,18 +174,17 @@ const Index = () => {
 
         {/* Contact Section */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 text-gray-100">Get in Touch</h2>
+          <h2 className="text-2xl font-bold mb-6 text-gray-100 flex items-center gap-2">
+            <span>📬</span> Get in Touch
+          </h2>
           <div className="bg-gray-800 shadow-lg rounded-lg p-6 border border-gray-700">
             <p className="text-gray-300 mb-4">
               I'm always open to discussing product ideas, collaboration opportunities, or just having a chat about technology and design.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex flex-wrap gap-4">
               <a href="mailto:omer.farooq812@gmail.com">
                 <Button className="bg-indigo-600 hover:bg-indigo-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-4 w-4">
-                    <rect width="20" height="16" x="2" y="4" rx="2"/>
-                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-                  </svg>
+                  <Mail className="mr-2 h-4 w-4" />
                   Contact Me
                 </Button>
               </a>
