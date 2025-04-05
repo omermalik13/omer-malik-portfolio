@@ -22,7 +22,7 @@ const SleepCard: React.FC<SleepCardProps> = ({ data }) => {
     <div className="oura-card mb-4">
       <h2 className="text-lg font-medium mb-2">Sleep</h2>
       <div className="flex items-center">
-        <CircleScore score={data.score} color="#A45FDB" size="large" />
+        <CircleScore score={data.score} color="#A45FDB" size="large" icon="moon" />
         <div className="ml-4 w-full">
           <div className="h-8 bg-oura-cardDark rounded-lg flex overflow-hidden">
             <div className="bg-gray-600" style={{ width: `${awakePercent}%` }} />
