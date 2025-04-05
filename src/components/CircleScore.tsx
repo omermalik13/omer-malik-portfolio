@@ -8,7 +8,7 @@ interface CircleScoreProps {
   size?: 'large' | 'small';
   label?: string;
   showLabel?: boolean;
-  icon?: 'heart' | 'activity' | 'moon' | none;
+  icon?: 'heart' | 'activity' | 'moon' | undefined;
 }
 
 const CircleScore: React.FC<CircleScoreProps> = ({ 
