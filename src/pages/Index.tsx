@@ -4,20 +4,21 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
+import { Linkedin } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-gray-100 pb-20">
       {/* Header */}
       <header className="bg-gray-800 shadow-md border-b border-gray-700">
-        <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl font-bold text-white">Omer Malik</h1>
           <p className="text-gray-300">Product Manager | Software Engineer</p>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+      <main className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         {/* About Me Section */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-6 text-gray-100">About Me</h2>
@@ -56,12 +57,14 @@ const Index = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
-                    <div className="aspect-video bg-gray-700 rounded-md overflow-hidden">
-                      <img 
-                        src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" 
-                        alt="Blood Sugar Sync App" 
-                        className="w-full h-full object-cover"
-                      />
+                    <div className="aspect-video rounded-md overflow-hidden flex justify-center items-center bg-gray-700">
+                      <div className="max-w-sm">
+                        <img 
+                          src="/placeholder.svg" 
+                          alt="Blood Sugar Sync App" 
+                          className="h-auto w-full rounded-md"
+                        />
+                      </div>
                     </div>
                     
                     <div>
@@ -99,10 +102,7 @@ const Index = () => {
                     </div>
                   </div>
                 </CardContent>
-                <CardFooter className="flex justify-between">
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700">View Code</Button>
-                  </a>
+                <CardFooter className="flex justify-center">
                   <Link to="/app">
                     <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">View Product Concept</Button>
                   </Link>
@@ -162,12 +162,8 @@ const Index = () => {
                 </Button>
               </a>
               <a href="https://www.linkedin.com/in/omer-malik-6b4347a3" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-700">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="mr-2 h-4 w-4">
-                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-                    <rect width="4" height="12" x="2" y="9"/>
-                    <circle cx="4" cy="4" r="2"/>
-                  </svg>
+                <Button variant="outline" className="border-[#0A66C2] bg-[#0A66C2]/10 text-[#0A66C2] hover:bg-[#0A66C2]/20 hover:text-white flex items-center">
+                  <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn
                 </Button>
               </a>
@@ -178,7 +174,7 @@ const Index = () => {
 
       {/* Footer */}
       <footer className="bg-gray-800 shadow-inner mt-auto border-t border-gray-700">
-        <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
           <Separator className="mb-4 bg-gray-700" />
           <div className="flex justify-between items-center">
             <p className="text-sm text-gray-400">© 2025 Omer Malik. All rights reserved.</p>
