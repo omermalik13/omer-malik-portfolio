@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -88,6 +89,11 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Custom Oura app styling */
+  body {
+    @apply bg-oura-background text-oura-text;
+  }
 }
 
 @layer base {
@@ -97,5 +103,32 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Custom classes for the app */
+@layer components {
+  .oura-card {
+    @apply bg-oura-card rounded-xl p-4;
+  }
+  
+  .oura-tab {
+    @apply px-4 py-2 rounded-full;
+  }
+  
+  .oura-tab-active {
+    @apply bg-oura-cardDark;
+  }
+  
+  .oura-tab-container {
+    @apply flex justify-center bg-oura-card rounded-full p-1;
+  }
+  
+  .oura-circle-score {
+    @apply w-24 h-24 rounded-full bg-oura-cardDark flex items-center justify-center relative;
+  }
+  
+  .oura-small-circle {
+    @apply w-8 h-8 rounded-full bg-oura-cardDark flex items-center justify-center mr-2;
   }
 }
