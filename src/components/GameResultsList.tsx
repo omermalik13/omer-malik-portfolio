@@ -1,5 +1,5 @@
 
-import { format } from "date-fns"
+import { format } from "date-fns/format"
 import { Badge } from "@/components/ui/badge"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 
