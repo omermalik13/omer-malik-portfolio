@@ -1,10 +1,9 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { LinkedIn, Mail, ExternalLink, Code, Dumbbell, Music, Shirt, BarChart } from "lucide-react";
+import { Mail, ExternalLink, Code, Dumbbell, Music, Shirt, BarChart, Linkedin } from "lucide-react";
 
 const Index = () => {
   return (
@@ -309,7 +308,7 @@ const Index = () => {
               </a>
               <a href="https://www.linkedin.com/in/omer-malik-6b4347a3" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="border-blue-600/40 bg-blue-900/10 text-blue-300 hover:bg-blue-900/30 hover:text-white">
-                  <LinkedIn className="mr-2 h-5 w-5" />
+                  <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn
                 </Button>
               </a>
