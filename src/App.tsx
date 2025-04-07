@@ -1,38 +1,33 @@
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { StrictMode } from "react";
-import Index from "./pages/Index";
-import Dashboard from "./pages/Dashboard";
-import GlucoseDetailView from "./pages/GlucoseDetailView";
-import NotificationView from "./pages/NotificationView";
-import Navigation from "./components/Navigation";
-import NotFound from "./pages/NotFound";
-import StravaPulse from "./pages/StravaPulse";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+import { Toaster } from "./components/ui/toaster"
+import MainLayout from "./components/layouts/MainLayout"
+import HomePage from "./pages/HomePage"
+import TeamAnalysisPage from "./pages/TeamAnalysisPage"
+import ScoutingReportPage from "./pages/ScoutingReportPage"
+import NotFoundPage from "./pages/NotFoundPage"
+import "./App.css"
 
-// Create a client
-const queryClient = new QueryClient();
+// Create a React Query client
+const queryClient = new QueryClient()
 
-const App = () => (
-  <StrictMode>
+function App() {
+  return (
     <QueryClientProvider client={queryClient}>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
+      <Router>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/app" element={<Dashboard />} />
-          <Route path="/app/glucose-detail" element={<GlucoseDetailView />} />
-          <Route path="/app/notifications" element={<NotificationView />} />
-          <Route path="/strava-pulse" element={<StravaPulse />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="/team/:teamId" element={<TeamAnalysisPage />} />
+            <Route path="/report/:teamId" element={<ScoutingReportPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+          </Route>
         </Routes>
-        {window.location.pathname.startsWith('/app') && <Navigation />}
-      </BrowserRouter>
+      </Router>
+      <Toaster />
     </QueryClientProvider>
-  </StrictMode>
-);
+  )
+}
 
-export default App;
+export default App
