@@ -21,6 +21,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/team/:teamId" element={<TeamAnalysisPage />} />
             <Route path="/report/:teamId" element={<ScoutingReportPage />} />
+            <Route path="/generate" element={<ScoutingReportPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
