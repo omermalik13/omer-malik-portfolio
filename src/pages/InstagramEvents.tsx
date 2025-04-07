@@ -204,7 +204,7 @@ const InstagramEvents = () => {
             </Card>
           </TabsContent>
 
-          {/* UI Mockups Tab */}
+          {/* UI Mockups Tab - UPDATED FOR RUN CLUB THEME */}
           <TabsContent value="mockups" className="space-y-6">
             <Card className="bg-gray-800 border-gray-700 text-gray-100">
               <CardContent className="p-6">
@@ -217,40 +217,40 @@ const InstagramEvents = () => {
                     <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
                       {/* Profile Header */}
                       <div className="flex items-start">
-                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
-                          <span className="text-white font-bold">AC</span>
+                        <div className="w-16 h-16 rounded-full bg-gradient-to-br from-blue-500 to-teal-500 flex items-center justify-center">
+                          <span className="text-white font-bold">RC</span>
                         </div>
                         <div className="ml-4">
-                          <h4 className="font-bold text-white">alexcreates</h4>
-                          <p className="text-gray-400 text-sm">Alex Creator</p>
+                          <h4 className="font-bold text-white">runclubnyc</h4>
+                          <p className="text-gray-400 text-sm">NYC Run Club</p>
                         </div>
                       </div>
                       
                       {/* Stats */}
                       <div className="flex justify-between mt-4 border-b border-gray-800 pb-4">
                         <div className="text-center">
-                          <p className="font-bold">253</p>
+                          <p className="font-bold">186</p>
                           <p className="text-xs text-gray-400">Posts</p>
                         </div>
                         <div className="text-center">
-                          <p className="font-bold">10.4K</p>
+                          <p className="font-bold">8.2K</p>
                           <p className="text-xs text-gray-400">Followers</p>
                         </div>
                         <div className="text-center">
-                          <p className="font-bold">982</p>
+                          <p className="font-bold">312</p>
                           <p className="text-xs text-gray-400">Following</p>
                         </div>
                       </div>
                       
                       {/* Bio */}
                       <div className="mt-4">
-                        <p className="text-sm">Creating digital art since 2018</p>
-                        <p className="text-sm">Workshop teacher & community builder</p>
-                        <p className="text-sm mt-2">🎨 Next Workshop:</p>
+                        <p className="text-sm">NYC's friendliest running community 🏃‍♂️🏃‍♀️</p>
+                        <p className="text-sm">Weekly runs in Central Park & Brooklyn</p>
+                        <p className="text-sm mt-2">🏃 Next Group Run:</p>
                         
                         {/* Event Link */}
                         <div className="mt-2 bg-gray-800 p-3 rounded-lg flex justify-between items-center">
-                          <p className="text-sm text-blue-400">Color Theory Workshop - RSVP Now!</p>
+                          <p className="text-sm text-blue-400">Saturday Morning 5K - Join Us!</p>
                           <span className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">→</span>
                         </div>
                       </div>
@@ -262,29 +262,29 @@ const InstagramEvents = () => {
                     <h3 className="text-lg font-semibold mb-3 text-white">Event Page</h3>
                     <div className="bg-gray-900 rounded-xl overflow-hidden border border-gray-800">
                       {/* Event Banner */}
-                      <div className="h-40 bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center">
+                      <div className="h-40 bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
                         <div className="text-center">
-                          <h4 className="text-white font-bold text-xl">COLOR THEORY</h4>
-                          <p className="text-white">WORKSHOP</p>
+                          <h4 className="text-white font-bold text-xl">SATURDAY MORNING</h4>
+                          <p className="text-white">5K GROUP RUN</p>
                         </div>
                       </div>
                       
                       {/* Event Details */}
                       <div className="p-4">
-                        <h4 className="font-bold text-lg">Color Theory Workshop</h4>
-                        <p className="text-sm text-gray-400">Hosted by @alexcreates</p>
+                        <h4 className="font-bold text-lg">Saturday Morning 5K</h4>
+                        <p className="text-sm text-gray-400">Hosted by @runclubnyc</p>
                         
                         <div className="mt-4 space-y-2">
                           <div className="flex items-center">
                             <Calendar className="w-4 h-4 mr-2 text-gray-400" />
-                            <p className="text-sm">Saturday, April 12 • 1:00-3:00 PM</p>
+                            <p className="text-sm">Saturday, April 13 • 8:00-9:30 AM</p>
                           </div>
                           
                           <div className="flex items-start">
                             <MapPin className="w-4 h-4 mr-2 text-gray-400 mt-0.5" />
                             <div>
-                              <p className="text-sm">CreativeSpace Studio</p>
-                              <p className="text-xs text-gray-500">123 Art Avenue, San Francisco</p>
+                              <p className="text-sm">Central Park Entrance</p>
+                              <p className="text-xs text-gray-500">E 72nd St & Fifth Ave, New York</p>
                             </div>
                           </div>
                         </div>
@@ -294,8 +294,8 @@ const InstagramEvents = () => {
                         
                         {/* Attendee Info */}
                         <div className="mt-4">
-                          <p className="text-sm"><Users className="w-4 h-4 inline mr-1" /> 42 people going</p>
-                          <p className="text-sm text-blue-400">+4 people you follow</p>
+                          <p className="text-sm"><Users className="w-4 h-4 inline mr-1" /> 28 people going</p>
+                          <p className="text-sm text-blue-400">+3 people you follow</p>
                           
                           <div className="mt-2 flex items-center">
                             <div className="flex -space-x-2">
@@ -304,7 +304,7 @@ const InstagramEvents = () => {
                                 </div>
                               ))}
                             </div>
-                            <span className="text-xs text-gray-400 ml-2">+ 37 more</span>
+                            <span className="text-xs text-gray-400 ml-2">+ 23 more</span>
                           </div>
                         </div>
                         
@@ -325,8 +325,8 @@ const InstagramEvents = () => {
                   <div className="border border-gray-700 rounded-md bg-gray-900 p-4">
                     <h3 className="text-lg font-semibold mb-3 text-white">RSVP Flow</h3>
                     <div className="bg-gray-900 rounded-xl p-6 border border-gray-800">
-                      <h4 className="font-bold text-center mb-2">RSVP to Event</h4>
-                      <p className="text-sm text-center text-gray-400 mb-4">Color Theory Workshop</p>
+                      <h4 className="font-bold text-center mb-2">RSVP to Run</h4>
+                      <p className="text-sm text-center text-gray-400 mb-4">Saturday Morning 5K</p>
                       
                       <div className="space-y-4">
                         <div>
@@ -347,6 +347,13 @@ const InstagramEvents = () => {
                           <label className="text-xs text-gray-400">Instagram (optional)</label>
                           <div className="mt-1 bg-gray-800 rounded-md p-2">
                             <p className="text-sm text-gray-500">@yourusername</p>
+                          </div>
+                        </div>
+                        
+                        <div>
+                          <label className="text-xs text-gray-400">Running Experience</label>
+                          <div className="mt-1 bg-gray-800 rounded-md p-2">
+                            <p className="text-sm text-gray-500">Select your level</p>
                           </div>
                         </div>
                         
@@ -379,26 +386,26 @@ const InstagramEvents = () => {
                         
                         {/* Event Card */}
                         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 rounded-lg overflow-hidden">
-                          <div className="h-14 bg-gradient-to-r from-pink-500 to-orange-500 flex items-center justify-center">
-                            <p className="text-white font-bold text-xs">COLOR THEORY</p>
+                          <div className="h-14 bg-gradient-to-r from-blue-500 to-teal-500 flex items-center justify-center">
+                            <p className="text-white font-bold text-xs">5K GROUP RUN</p>
                           </div>
                           
                           <div className="bg-white text-gray-900 p-2">
-                            <p className="text-xs font-bold mb-1">Color Theory Workshop</p>
-                            <p className="text-[10px]">Saturday, April 12 • 1:00-3:00 PM</p>
-                            <p className="text-[10px]">CreativeSpace Studio</p>
+                            <p className="text-xs font-bold mb-1">Saturday Morning 5K</p>
+                            <p className="text-[10px]">Saturday, April 13 • 8:00 AM</p>
+                            <p className="text-[10px]">Central Park Entrance</p>
                             
                             <div className="mt-2 rounded-full text-center py-1 bg-blue-500">
-                              <p className="text-[10px] text-white font-bold">RSVP NOW</p>
+                              <p className="text-[10px] text-white font-bold">JOIN US</p>
                             </div>
                             
-                            <p className="text-[10px] mt-1">42 going • +4 people you follow</p>
+                            <p className="text-[10px] mt-1">28 going • All levels welcome!</p>
                           </div>
                         </div>
                         
                         {/* Swipe Up */}
                         <div className="absolute bottom-6 left-0 right-0 text-center">
-                          <p className="text-xs text-white">Swipe up to RSVP</p>
+                          <p className="text-xs text-white">Swipe up to join</p>
                           <p className="text-white mt-1">↑</p>
                         </div>
                       </div>
@@ -410,10 +417,10 @@ const InstagramEvents = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
                   {/* Post-Event Gallery */}
                   <div className="border border-gray-700 rounded-md bg-gray-900 p-4">
-                    <h3 className="text-lg font-semibold mb-3 text-white">Post-Event Gallery</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-white">Post-Run Gallery</h3>
                     <div className="bg-gray-900 rounded-xl p-4 border border-gray-800">
-                      <h4 className="font-bold">Color Theory Workshop</h4>
-                      <p className="text-sm text-gray-400">Event Completed • April 12</p>
+                      <h4 className="font-bold">Saturday Morning 5K</h4>
+                      <p className="text-sm text-gray-400">Run Completed • April 13</p>
                       
                       <div className="grid grid-cols-3 gap-1 mt-4">
                         {[1, 2, 3, 4, 5, 6].map((i) => (
@@ -421,43 +428,79 @@ const InstagramEvents = () => {
                         ))}
                       </div>
                       
+                      <div className="bg-gray-750 rounded p-3 mt-4">
+                        <p className="text-sm font-medium">Run Stats:</p>
+                        <div className="grid grid-cols-3 gap-2 mt-2">
+                          <div className="text-center">
+                            <p className="text-xs text-gray-400">Distance</p>
+                            <p className="font-bold">5.2 km</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-xs text-gray-400">Avg Pace</p>
+                            <p className="font-bold">6:12/km</p>
+                          </div>
+                          <div className="text-center">
+                            <p className="text-xs text-gray-400">Runners</p>
+                            <p className="font-bold">28</p>
+                          </div>
+                        </div>
+                      </div>
+                      
                       <Button className="w-full mt-4 bg-blue-500 hover:bg-blue-600">
-                        <Camera className="w-4 h-4 mr-1" /> Upload Event Photos
+                        <Camera className="w-4 h-4 mr-1" /> Upload Run Photos
                       </Button>
                     </div>
                   </div>
                   
                   {/* Host Dashboard */}
                   <div className="border border-gray-700 rounded-md bg-gray-900 p-4">
-                    <h3 className="text-lg font-semibold mb-3 text-white">Host Dashboard</h3>
+                    <h3 className="text-lg font-semibold mb-3 text-white">Run Club Dashboard</h3>
                     <div className="bg-gray-900 rounded-xl p-4 border border-gray-800">
-                      <h4 className="font-bold">Event Dashboard</h4>
-                      <p className="text-sm text-gray-400">Color Theory Workshop</p>
+                      <h4 className="font-bold">Run Club Dashboard</h4>
+                      <p className="text-sm text-gray-400">Saturday Morning 5K</p>
                       
                       <div className="grid grid-cols-3 gap-2 mt-4">
                         <div className="bg-gray-800 p-2 rounded text-center">
-                          <p className="font-bold">42</p>
+                          <p className="font-bold">28</p>
                           <p className="text-xs text-gray-400">RSVPs</p>
                         </div>
                         <div className="bg-gray-800 p-2 rounded text-center">
-                          <p className="font-bold">38</p>
+                          <p className="font-bold">23</p>
                           <p className="text-xs text-gray-400">Attended</p>
                         </div>
                         <div className="bg-gray-800 p-2 rounded text-center">
-                          <p className="font-bold">24</p>
+                          <p className="font-bold">18</p>
                           <p className="text-xs text-gray-400">Photos</p>
+                        </div>
+                      </div>
+                      
+                      <div className="bg-gray-750 p-3 rounded mt-4">
+                        <p className="text-sm font-medium">Pace Groups:</p>
+                        <div className="grid grid-cols-3 gap-1 mt-2">
+                          <div className="bg-gray-800 p-1 rounded text-center text-xs">
+                            <Badge className="bg-green-600 w-full">Beginner</Badge>
+                            <p className="mt-1">8 runners</p>
+                          </div>
+                          <div className="bg-gray-800 p-1 rounded text-center text-xs">
+                            <Badge className="bg-yellow-600 w-full">Intermediate</Badge>
+                            <p className="mt-1">10 runners</p>
+                          </div>
+                          <div className="bg-gray-800 p-1 rounded text-center text-xs">
+                            <Badge className="bg-red-600 w-full">Advanced</Badge>
+                            <p className="mt-1">5 runners</p>
+                          </div>
                         </div>
                       </div>
                       
                       <div className="space-y-2 mt-4">
                         <Button variant="outline" className="w-full border-gray-700">
-                          <MessageSquare className="w-4 h-4 mr-1" /> Message Attendees
+                          <MessageSquare className="w-4 h-4 mr-1" /> Message Runners
                         </Button>
                         <Button variant="outline" className="w-full border-gray-700">
-                          <Camera className="w-4 h-4 mr-1" /> Create Event Highlight  
+                          <Camera className="w-4 h-4 mr-1" /> Create Run Highlight  
                         </Button>
                         <Button className="w-full bg-blue-500 hover:bg-blue-600">
-                          <Plus className="w-4 h-4 mr-1" /> Create Similar Event
+                          <Plus className="w-4 h-4 mr-1" /> Schedule Next Run
                         </Button>
                       </div>
                     </div>
