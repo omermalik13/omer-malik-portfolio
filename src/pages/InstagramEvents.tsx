@@ -180,7 +180,7 @@ const InstagramEvents = () => {
                       <span>🧪</span> Success Criteria
                     </h3>
                     <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
-                      <li>Users can create and share an event in <3 minutes</li>
+                      <li>Users can create and share an event in &lt;3 minutes</li>
                       <li>RSVPs from both IG and non-IG users</li>
                       <li>At least 50% of guests opt-in for reminders</li>
                       <li>70% RSVP conversion rate from shared link</li>
