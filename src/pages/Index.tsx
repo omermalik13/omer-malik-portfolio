@@ -69,7 +69,7 @@ const Index = () => {
             <TabsList className="w-full mb-6 bg-gray-700 p-1 rounded-lg">
               <TabsTrigger value="bloodSugarSync" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Blood Sugar Sync</TabsTrigger>
               <TabsTrigger value="stravaPulse" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Strava Pulse</TabsTrigger>
-              <TabsTrigger value="project3" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Project 3</TabsTrigger>
+              <TabsTrigger value="instagramEvents" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Instagram Events</TabsTrigger>
             </TabsList>
 
             {/* Blood Sugar Sync Tab */}
@@ -200,20 +200,67 @@ const Index = () => {
               </Card>
             </TabsContent>
 
-            {/* Placeholder for Project 3 */}
-            <TabsContent value="project3">
+            {/* Instagram Events Tab */}
+            <TabsContent value="instagramEvents" className="space-y-6">
               <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
-                    <span>🚧</span> Project 3
+                    <span>📅</span> Instagram Events
                   </CardTitle>
-                  <CardDescription className="text-gray-400">Coming soon</CardDescription>
+                  <CardDescription className="text-gray-400">Event Creation & Management for Instagram</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">This project is currently under development.</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
+                      <div className="bg-gray-700 rounded-md p-4 border border-gray-600">
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🧭</span> Overview
+                        </h4>
+                        <p className="text-sm mb-4 text-gray-300">
+                          This product enables creators, hosts, and communities to create beautiful, social-first event pages that 
+                          can be shared via Instagram bios, Stories, or DMs — no app download or IG login required. It blends the 
+                          vibe of Partiful with the distribution power of Instagram, while remaining platform-agnostic for non-IG users.
+                        </p>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>💡</span> Key Features
+                        </h4>
+                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
+                          <li>Create & customize mobile-friendly event pages</li>
+                          <li>Support for public and private events with RSVP</li>
+                          <li>Social discovery showing mutual connections attending</li>
+                          <li>Reminders, updates, and post-event media sharing</li>
+                          <li>Works without requiring Instagram login or app</li>
+                        </ul>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>👥</span> Use Cases
+                        </h4>
+                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
+                          <li>Creators sharing party links in bio or Story</li>
+                          <li>Brands launching popups without Eventbrite</li>
+                          <li>Friend groups coordinating casual hangouts</li>
+                          <li>Venues promoting events with social proof</li>
+                        </ul>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🎯</span> Success Metrics
+                        </h4>
+                        <p className="text-sm text-gray-300">
+                          Users creating events in &lt;3 minutes, 70% RSVP conversion rate from shared links, and strong 
+                          adoption from both Instagram and non-Instagram users.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
-                <CardFooter>
-                  <Button variant="outline" disabled className="border-gray-600 text-gray-400">View Project</Button>
+                <CardFooter className="flex justify-center">
+                  <Link to="/instagram-events">
+                    <Button className="bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#FCAF45] hover:opacity-90 text-white">
+                      View Product Concept
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </TabsContent>
