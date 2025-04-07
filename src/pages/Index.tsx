@@ -1,37 +1,32 @@
+
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Mail, ExternalLink, Code, Dumbbell, Music, Shirt, BarChart, Linkedin } from "lucide-react";
+import { Linkedin, Mail, MapPin, BookOpen, Code, Star, Dumbbell, Music, Headphones, Shirt, Watch, Smartphone, Activity, BarChart } from "lucide-react";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-[#0f172a] text-gray-100">
-      {/* Header with Gradient */}
-      <header className="bg-gradient-to-r from-[#1e293b] to-[#0f172a] border-b border-blue-900/40 shadow-md py-8">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col gap-2">
-            <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
-              Omer Malik
-            </h1>
-            <p className="text-lg md:text-xl text-blue-300">Product Manager | Software Engineer</p>
-          </div>
+    <div className="min-h-screen bg-gray-900 text-gray-100 pb-20">
+      {/* Header */}
+      <header className="bg-gray-800 shadow-md border-b border-gray-700">
+        <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+          <h1 className="text-3xl font-bold text-white flex items-center gap-2">
+            <span>✨</span> Omer Malik
+          </h1>
+          <p className="text-gray-300 ml-6 mt-1">Product Manager | Software Engineer</p>
         </div>
       </header>
 
       {/* Main Content */}
-      <main className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8 space-y-16">
+      <main className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
         {/* About Me Section */}
-        <section>
-          <div className="space-y-2 mb-6">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
-              About Me
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"></div>
-          </div>
-          
-          <div className="bg-[#1e293b] rounded-xl p-6 border border-blue-900/40 shadow-lg backdrop-blur-sm">
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-100 flex items-center gap-2">
+            <span>👋</span> About Me
+          </h2>
+          <div className="bg-gray-800 shadow-lg rounded-lg p-6 border border-gray-700">
             <p className="text-gray-300 leading-relaxed mb-4">
               Hi, I'm Omer — a former Software Engineer turned Product Manager with 8+ years of experience in fast-paced 
               startup environments spanning e-commerce and AI/ML. My strengths lie in user experience optimization, 
@@ -45,19 +40,19 @@ const Index = () => {
               My other interests include AI/ML technology, sports, music and fashion.
             </p>
             
-            <div className="mt-6 pt-4 border-t border-blue-900/40">
-              <h3 className="text-md font-medium text-blue-300 mb-2">Interests</h3>
+            <div className="mt-6 pt-4 border-t border-gray-700">
+              <h3 className="text-md font-medium text-gray-200 mb-2">Interests</h3>
               <div className="flex flex-wrap gap-2">
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-blue-900/40 text-blue-300 border border-blue-800/40">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
                   <Code className="w-3.5 h-3.5 mr-1" /> Tech
                 </span>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-blue-900/40 text-blue-300 border border-blue-800/40">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
                   <Dumbbell className="w-3.5 h-3.5 mr-1" /> Fitness
                 </span>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-blue-900/40 text-blue-300 border border-blue-800/40">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
                   <Music className="w-3.5 h-3.5 mr-1" /> Music
                 </span>
-                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-blue-900/40 text-blue-300 border border-blue-800/40">
+                <span className="inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-700 text-gray-200">
                   <Shirt className="w-3.5 h-3.5 mr-1" /> Fashion
                 </span>
               </div>
@@ -66,43 +61,33 @@ const Index = () => {
         </section>
 
         {/* Projects Section */}
-        <section>
-          <div className="space-y-2 mb-6">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
-              My Projects
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"></div>
-          </div>
-          
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-100 flex items-center gap-2">
+            <span>💼</span> My Projects
+          </h2>
           <Tabs defaultValue="bloodSugarSync" className="w-full">
-            <TabsList className="w-full mb-6 bg-[#1e293b] border border-blue-900/40 p-1 rounded-lg">
-              <TabsTrigger value="bloodSugarSync" className="flex-1 text-gray-300 data-[state=active]:bg-blue-900/40 data-[state=active]:text-white">
-                Blood Sugar Sync
-              </TabsTrigger>
-              <TabsTrigger value="stravaPulse" className="flex-1 text-gray-300 data-[state=active]:bg-blue-900/40 data-[state=active]:text-white">
-                Strava Pulse
-              </TabsTrigger>
-              <TabsTrigger value="project3" className="flex-1 text-gray-300 data-[state=active]:bg-blue-900/40 data-[state=active]:text-white">
-                NBA ScoutSense
-              </TabsTrigger>
+            <TabsList className="w-full mb-6 bg-gray-700 p-1 rounded-lg">
+              <TabsTrigger value="bloodSugarSync" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Blood Sugar Sync</TabsTrigger>
+              <TabsTrigger value="stravaPulse" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Strava Pulse</TabsTrigger>
+              <TabsTrigger value="project3" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Project 3</TabsTrigger>
             </TabsList>
 
             {/* Blood Sugar Sync Tab */}
             <TabsContent value="bloodSugarSync" className="space-y-6">
-              <Card className="bg-[#1e293b] border-blue-900/40 text-gray-100">
+              <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-white">
-                    Blood Sugar Sync
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <span>📊</span> Blood Sugar Sync
                   </CardTitle>
-                  <CardDescription className="text-blue-300">Glucose and Sleep Monitoring Application</CardDescription>
+                  <CardDescription className="text-gray-400">Glucose and Sleep Monitoring Application</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
-                      <div className="bg-[#0f172a] rounded-md p-4 border border-blue-900/40">
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Problem Statement
+                      <div className="bg-gray-700 rounded-md p-4 border border-gray-600">
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🔍</span> Problem Statement
                         </h4>
                         <p className="text-sm mb-4 text-gray-300">
                           Many people with diabetes or those monitoring their glucose levels struggle to understand how their blood 
@@ -110,8 +95,8 @@ const Index = () => {
                           but rarely provide meaningful correlations between both.
                         </p>
                         
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Solution
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>💡</span> Solution
                         </h4>
                         <p className="text-sm mb-4 text-gray-300">
                           Blood Sugar Sync is an application that monitors and analyzes how blood glucose levels impact sleep quality 
@@ -122,8 +107,8 @@ const Index = () => {
                           This concept could be integrated into wearable devices like Oura, Garmin, Apple Watch and WHOOP!
                         </p>
                         
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Key Features
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>✨</span> Key Features
                         </h4>
                         <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
                           <li>Real-time glucose monitoring with visualization</li>
@@ -133,8 +118,8 @@ const Index = () => {
                           <li>Comprehensive health metrics dashboard</li>
                         </ul>
                         
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Success Metrics
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🎯</span> Success Metrics
                         </h4>
                         <p className="text-sm text-gray-300">
                           Improved sleep quality scores, reduced glucose variability during night, and increased user engagement 
@@ -146,10 +131,7 @@ const Index = () => {
                 </CardContent>
                 <CardFooter className="flex justify-center">
                   <Link to="/app">
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                      View Product Concept
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Button className="bg-indigo-600 hover:bg-indigo-700 text-white">View Product Concept</Button>
                   </Link>
                 </CardFooter>
               </Card>
@@ -157,20 +139,20 @@ const Index = () => {
 
             {/* Strava Pulse Tab */}
             <TabsContent value="stravaPulse" className="space-y-6">
-              <Card className="bg-[#1e293b] border-blue-900/40 text-gray-100">
+              <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-white">
-                    Strava Pulse
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <span>🏃‍♂️</span> Strava Pulse
                   </CardTitle>
-                  <CardDescription className="text-blue-300">Recovery & Readiness Layer for Strava</CardDescription>
+                  <CardDescription className="text-gray-400">Recovery & Readiness Layer for Strava</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-4">
                     <div>
                       <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
-                      <div className="bg-[#0f172a] rounded-md p-4 border border-blue-900/40">
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Problem Statement
+                      <div className="bg-gray-700 rounded-md p-4 border border-gray-600">
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🔍</span> Problem Statement
                         </h4>
                         <p className="text-sm mb-4 text-gray-300">
                           Users are tracking their performance in Strava but lack insight into how their body is 
@@ -178,8 +160,8 @@ const Index = () => {
                           prevent overtraining or promote smarter scheduling.
                         </p>
                         
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Solution
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>💡</span> Solution
                         </h4>
                         <p className="text-sm mb-4 text-gray-300">
                           Strava Pulse introduces a recovery and readiness system into the app that informs users 
@@ -188,8 +170,8 @@ const Index = () => {
                           community, and personal health optimization.
                         </p>
                         
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Key Features
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>✨</span> Key Features
                         </h4>
                         <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
                           <li>Recovery Score combining HRV, sleep, and resting heart rate</li>
@@ -199,8 +181,8 @@ const Index = () => {
                           <li>Shareable Recovery Snapshots</li>
                         </ul>
                         
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Success Metrics
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🎯</span> Success Metrics
                         </h4>
                         <p className="text-sm text-gray-300">
                           Feature adoption rate among active users, increase in daily app open rate (especially on 
@@ -212,74 +194,26 @@ const Index = () => {
                 </CardContent>
                 <CardFooter className="flex justify-center">
                   <Link to="/strava-pulse">
-                    <Button className="bg-[#fc4c02] hover:bg-[#e44400] text-white">
-                      View Product Concept
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
+                    <Button className="bg-[#fc4c02] hover:bg-[#e44400] text-white">View Product Concept</Button>
                   </Link>
                 </CardFooter>
               </Card>
             </TabsContent>
 
-            {/* NBA ScoutSense Project Tab */}
+            {/* Placeholder for Project 3 */}
             <TabsContent value="project3">
-              <Card className="bg-[#1e293b] border-blue-900/40 text-gray-100">
+              <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
-                  <CardTitle className="text-white">
-                    NBA ScoutSense
+                  <CardTitle className="text-white flex items-center gap-2">
+                    <span>🚧</span> Project 3
                   </CardTitle>
-                  <CardDescription className="text-blue-300">Professional Basketball Analytics Platform</CardDescription>
+                  <CardDescription className="text-gray-400">Coming soon</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
-                      <div className="bg-[#0f172a] rounded-md p-4 border border-blue-900/40">
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Problem Statement
-                        </h4>
-                        <p className="text-sm mb-4 text-gray-300">
-                          NBA coaches and scouts need a more efficient way to analyze team performance, identify strengths and 
-                          weaknesses, and generate comprehensive scouting reports for upcoming opponents.
-                        </p>
-                        
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Solution
-                        </h4>
-                        <p className="text-sm mb-4 text-gray-300">
-                          NBA ScoutSense is an analytics platform that provides in-depth team and player analysis with AI-generated 
-                          scouting reports to improve game preparation and strategic decision-making.
-                        </p>
-                        
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Key Features
-                        </h4>
-                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
-                          <li>Comprehensive team performance statistics</li>
-                          <li>Detailed player performance metrics</li>
-                          <li>AI-powered scouting report generation</li>
-                          <li>Game result tracking and analysis</li>
-                          <li>Interactive data visualizations</li>
-                        </ul>
-                        
-                        <h4 className="font-semibold mb-2 text-blue-300">
-                          Success Metrics
-                        </h4>
-                        <p className="text-sm text-gray-300">
-                          Improved team preparation efficiency, increased strategic insights, and more effective game planning 
-                          for coaching staffs.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+                  <p className="text-gray-300">This project is currently under development.</p>
                 </CardContent>
-                <CardFooter className="flex justify-center">
-                  <Link to="/nba">
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                      View NBA ScoutSense
-                      <ExternalLink className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
+                <CardFooter>
+                  <Button variant="outline" disabled className="border-gray-600 text-gray-400">View Project</Button>
                 </CardFooter>
               </Card>
             </TabsContent>
@@ -287,27 +221,23 @@ const Index = () => {
         </section>
 
         {/* Contact Section */}
-        <section>
-          <div className="space-y-2 mb-6">
-            <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-blue-300 bg-clip-text text-transparent">
-              Get in Touch
-            </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-blue-300 rounded-full"></div>
-          </div>
-          
-          <div className="bg-[#1e293b] rounded-xl p-6 border border-blue-900/40 shadow-lg backdrop-blur-sm">
-            <p className="text-gray-300 mb-6">
+        <section className="mb-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-100 flex items-center gap-2">
+            <span>📬</span> Get in Touch
+          </h2>
+          <div className="bg-gray-800 shadow-lg rounded-lg p-6 border border-gray-700">
+            <p className="text-gray-300 mb-4">
               I'm always open to discussing product ideas, collaboration opportunities, or just having a chat about technology and design.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center md:justify-start">
+            <div className="flex flex-wrap gap-4">
               <a href="mailto:omer.farooq812@gmail.com">
-                <Button className="bg-blue-600 hover:bg-blue-700 border border-blue-500">
+                <Button className="bg-indigo-600 hover:bg-indigo-700">
                   <Mail className="mr-2 h-4 w-4" />
                   Contact Me
                 </Button>
               </a>
               <a href="https://www.linkedin.com/in/omer-malik-6b4347a3" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="border-blue-600/40 bg-blue-900/10 text-blue-300 hover:bg-blue-900/30 hover:text-white">
+                <Button variant="outline" className="border-[#0A66C2] bg-[#0A66C2]/10 text-[#0A66C2] hover:bg-[#0A66C2]/20 hover:text-white flex items-center">
                   <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn
                 </Button>
@@ -318,19 +248,19 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#1e293b] shadow-inner mt-auto border-t border-blue-900/40">
-        <div className="max-w-5xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-          <Separator className="mb-4 bg-blue-900/40" />
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-blue-300">© 2025 Omer Malik. All rights reserved.</p>
-            <div className="flex space-x-6">
-              <Link to="/" className="text-sm text-blue-300 hover:text-white transition-colors">
+      <footer className="bg-gray-800 shadow-inner mt-auto border-t border-gray-700">
+        <div className="max-w-5xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+          <Separator className="mb-4 bg-gray-700" />
+          <div className="flex justify-between items-center">
+            <p className="text-sm text-gray-400">© 2025 Omer Malik. All rights reserved.</p>
+            <div className="flex space-x-4">
+              <Link to="/" className="text-sm text-gray-400 hover:text-gray-200">
                 Home
               </Link>
-              <Link to="#projects" className="text-sm text-blue-300 hover:text-white transition-colors">
+              <Link to="/" className="text-sm text-gray-400 hover:text-gray-200">
                 Projects
               </Link>
-              <a href="mailto:omer.farooq812@gmail.com" className="text-sm text-blue-300 hover:text-white transition-colors">
+              <a href="mailto:omer.farooq812@gmail.com" className="text-sm text-gray-400 hover:text-gray-200">
                 Contact
               </a>
             </div>
