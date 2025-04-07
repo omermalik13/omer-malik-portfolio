@@ -7,6 +7,7 @@ import HomePage from "./pages/HomePage"
 import TeamAnalysisPage from "./pages/TeamAnalysisPage"
 import ScoutingReportPage from "./pages/ScoutingReportPage"
 import NotFoundPage from "./pages/NotFoundPage"
+import Index from "./pages/Index"
 import "./App.css"
 
 // Create a React Query client
@@ -17,11 +18,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Routes>
-          <Route path="/" element={<MainLayout />}>
+          <Route path="/" element={<Index />} />
+          <Route path="/nba" element={<MainLayout />}>
             <Route index element={<HomePage />} />
-            <Route path="/team/:teamId" element={<TeamAnalysisPage />} />
-            <Route path="/report/:teamId" element={<ScoutingReportPage />} />
-            <Route path="/generate" element={<ScoutingReportPage />} />
+            <Route path="/nba/team/:teamId" element={<TeamAnalysisPage />} />
+            <Route path="/nba/report/:teamId" element={<ScoutingReportPage />} />
+            <Route path="/nba/generate" element={<ScoutingReportPage />} />
             <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>

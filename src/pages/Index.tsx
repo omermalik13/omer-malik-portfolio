@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -69,7 +68,7 @@ const Index = () => {
             <TabsList className="w-full mb-6 bg-gray-700 p-1 rounded-lg">
               <TabsTrigger value="bloodSugarSync" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Blood Sugar Sync</TabsTrigger>
               <TabsTrigger value="stravaPulse" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Strava Pulse</TabsTrigger>
-              <TabsTrigger value="project3" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">Project 3</TabsTrigger>
+              <TabsTrigger value="project3" className="flex-1 text-gray-300 data-[state=active]:bg-gray-600 data-[state=active]:text-white">NBA ScoutSense</TabsTrigger>
             </TabsList>
 
             {/* Blood Sugar Sync Tab */}
@@ -200,20 +199,62 @@ const Index = () => {
               </Card>
             </TabsContent>
 
-            {/* Placeholder for Project 3 */}
+            {/* NBA ScoutSense Project Tab */}
             <TabsContent value="project3">
               <Card className="bg-gray-800 border-gray-700 text-gray-100">
                 <CardHeader>
                   <CardTitle className="text-white flex items-center gap-2">
-                    <span>🚧</span> Project 3
+                    <span>🏀</span> NBA ScoutSense
                   </CardTitle>
-                  <CardDescription className="text-gray-400">Coming soon</CardDescription>
+                  <CardDescription className="text-gray-400">Professional Basketball Analytics Platform</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300">This project is currently under development.</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-white">Product Requirements Document</h3>
+                      <div className="bg-gray-700 rounded-md p-4 border border-gray-600">
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🔍</span> Problem Statement
+                        </h4>
+                        <p className="text-sm mb-4 text-gray-300">
+                          NBA coaches and scouts need a more efficient way to analyze team performance, identify strengths and 
+                          weaknesses, and generate comprehensive scouting reports for upcoming opponents.
+                        </p>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>💡</span> Solution
+                        </h4>
+                        <p className="text-sm mb-4 text-gray-300">
+                          NBA ScoutSense is an analytics platform that provides in-depth team and player analysis with AI-generated 
+                          scouting reports to improve game preparation and strategic decision-making.
+                        </p>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>✨</span> Key Features
+                        </h4>
+                        <ul className="list-disc list-inside text-sm mb-4 text-gray-300 ml-2">
+                          <li>Comprehensive team performance statistics</li>
+                          <li>Detailed player performance metrics</li>
+                          <li>AI-powered scouting report generation</li>
+                          <li>Game result tracking and analysis</li>
+                          <li>Interactive data visualizations</li>
+                        </ul>
+                        
+                        <h4 className="font-semibold mb-2 text-gray-200 flex items-center gap-2">
+                          <span>🎯</span> Success Metrics
+                        </h4>
+                        <p className="text-sm text-gray-300">
+                          Improved team preparation efficiency, increased strategic insights, and more effective game planning 
+                          for coaching staffs.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
-                <CardFooter>
-                  <Button variant="outline" disabled className="border-gray-600 text-gray-400">View Project</Button>
+                <CardFooter className="flex justify-center">
+                  <Link to="/nba">
+                    <Button className="bg-blue-600 hover:bg-blue-700 text-white">View NBA ScoutSense</Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </TabsContent>

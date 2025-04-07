@@ -9,13 +9,13 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} NBA ScoutSense. All rights reserved.
         </p>
         <nav className="flex items-center gap-4 text-sm text-muted-foreground">
-          <Link to="/" className="hover:text-foreground">
+          <Link to="/nba" className="hover:text-foreground">
             Home
           </Link>
-          <Link to="/team/1610612738" className="hover:text-foreground">
+          <Link to="/nba/team/1610612738" className="hover:text-foreground">
             Teams
           </Link>
-          <Link to="/report/1610612738" className="hover:text-foreground">
+          <Link to="/nba/report/1610612738" className="hover:text-foreground">
             Reports
           </Link>
         </nav>
